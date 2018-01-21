@@ -83,23 +83,22 @@ int main()
           
           pid_throttle.UpdateError(std::abs(cte)+std::abs(angle/pi()));
           // pid_throttle.UpdateError(std::abs(cte));
-          // throttle = 0.4 - pid_throttle.TotalError();
           throttle = 0.5 - pid_throttle.TotalError(); // +angle
           if (throttle < 0.0) throttle = 0.0;
           // if (throttle < -1.0) throttle = -1.0;
           if (throttle > 1.0) throttle = 1.0;
 
-          // // DEBUG
-          std::cout << "CTE: " << cte << " Steering Value: " << steer_value << "speed: " << speed << "angle: " << angle << "angle/pi: " << angle/pi() << std::endl;
-          std::cout << "cte+angle: " << std::abs(cte)+std::abs(angle) << "\n";
-          std::cout << "throttle: " << throttle << "\n";
-          std::cout << "pid-steering: Kp=" << pid.Kp << " Kd=" << pid.Kd << " Ki=" << pid.Ki << std::endl;
-          std::cout << "pid-steering: perr=" << pid.p_error << " derr=" << pid.d_error << " ierr=" << pid.i_error << std::endl;
-          if (pid.autotune)
-            std::cout << "step: " << pid.step << "twiddle_step: " << pid.twiddle_step << "\n";
+          // // // DEBUG
+          // std::cout << "CTE: " << cte << " Steering Value: " << steer_value << "speed: " << speed << "angle: " << angle << "angle/pi: " << angle/pi() << std::endl;
+          // std::cout << "cte+angle: " << std::abs(cte)+std::abs(angle) << "\n";
+          // std::cout << "throttle: " << throttle << "\n";
+          // std::cout << "pid-steering: Kp=" << pid.Kp << " Kd=" << pid.Kd << " Ki=" << pid.Ki << std::endl;
+          // std::cout << "pid-steering: perr=" << pid.p_error << " derr=" << pid.d_error << " ierr=" << pid.i_error << std::endl;
+          // if (pid.autotune)
+          //   std::cout << "step: " << pid.step << "twiddle_step: " << pid.twiddle_step << "\n";
 
-          std::cout << "pid-throttle: Kp=" << pid_throttle.Kp << " Kd=" << pid_throttle.Kd << " Ki=" << pid_throttle.Ki << std::endl;
-          std::cout << "pid-throttle: perr=" << pid_throttle.p_error << " derr=" << pid_throttle.d_error << " ierr=" << pid_throttle.i_error << std::endl;
+          // std::cout << "pid-throttle: Kp=" << pid_throttle.Kp << " Kd=" << pid_throttle.Kd << " Ki=" << pid_throttle.Ki << std::endl;
+          // std::cout << "pid-throttle: perr=" << pid_throttle.p_error << " derr=" << pid_throttle.d_error << " ierr=" << pid_throttle.i_error << std::endl;
 
 
           // reset sim for a new twiddle run

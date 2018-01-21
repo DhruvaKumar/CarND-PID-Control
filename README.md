@@ -1,9 +1,9 @@
 # CarND-Controls-PID
 
-![alt text](./results/gif.gif)
+![alt text](./results/pid.gif)
 
 The project was done as a part of Udacity's self-driving nanodegree program. It implements a PID controller to drive a car around a track. At every time step, [Udacity's simulator](https://github.com/udacity/self-driving-car-sim/releases) sends the cross track error (distance between the vehicle and the center of the lane), speed and angle to the program. The program sends back actuator inputs: steering angle and speed. The communication is achieved with [uWebSockets](https://github.com/uWebSockets/uWebSockets).
----
+
 
 ## Dependencies
 
@@ -41,4 +41,4 @@ The throttle PID was manually tuned to the following gains: `Kp=0.05 Kd=0.1 Ki=0
 
 
 
-[Final video](./results/pid.mp4)
+[Final video](./results/pidm.mp4)
