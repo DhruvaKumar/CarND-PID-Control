@@ -33,7 +33,7 @@ public:
   int twiddle_step;
   double best_twiddle_error;
   bool tried_increasing, tried_decreasing;
-  int tolerance;
+  double tolerance;
   std::ofstream twiddlef;
   /*
   * Constructor

@@ -1,6 +1,8 @@
 #include "PID.h"
 #include <algorithm>
 #include <iostream>
+#include <math.h>
+#include <numeric>
 
 using namespace std;
 
